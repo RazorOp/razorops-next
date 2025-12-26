@@ -1,3 +1,5 @@
+"use client";
+
 export default function Contact() {
   return (
     <div className="min-h-screen bg-gray-50 text-gray-800 font-sans mt-20">
