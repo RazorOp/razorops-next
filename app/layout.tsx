@@ -27,7 +27,127 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+
+
+        {/* --- NAVIGATION --- */}
+      <nav className="fixed top-0 w-full z-50 transition-all duration-300 bg-black py-5">
+        <div className="container mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center gap-2 group cursor-pointer">
+
+            <div className="w-8 h-8 bg-gradient-to-br from-[#8E2DE2] to-[#4A00E0] rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/20">
+              <a href="/" className="text-white font-bold text-xl">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </a>
+            </div>
+            <a href="/" className="text-white font-bold text-xl">
+              <span className="text-2xl font-bold text-white tracking-tight"><i>RAZOROPS</i></span>
+            </a>
+            
+          </div>
+          <div className="hidden md:flex items-center text-white gap-8 text-sm font-medium">
+            <a href="/" className="hover:text-purple-400 transition-colors">Home</a>
+            <a href="#features" className="hover:text-purple-400 transition-colors">Platform</a>
+            <a href="#solutions" className="hover:text-purple-400 transition-colors">Solutions</a>
+            <a href="#pricing" className="hover:text-purple-400 transition-colors">Pricing</a>
+            <a href="/blog" className="hover:text-purple-400 transition-colors">Blog</a>
+            <a href="/contact" className="hover:text-purple-400 transition-colors">Contact</a>
+          </div>
+          <div className="flex items-center gap-4">
+            <button className="hidden sm:block text-sm font-semibold hover:text-white transition-colors">Login</button>
+            <button className="bg-gradient-to-r from-[#8E2DE2] to-[#4A00E0] hover:scale-105 active:scale-95 transition-all text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-purple-500/25">
+              Get Started Free
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div className="min-h-[80vh]">
+        {children}  
+      </div>
+
+         {/* --- FOOTER --- */}
+      <footer className="bg-black border-t border-white/10 pt-20 pb-10">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-12 mb-16">
+            <div className="col-span-1 md:col-span-1">
+              <div className="flex items-center gap-2 mb-6">
+                <div className="w-6 h-6 bg-gradient-to-br from-[#8E2DE2] to-[#4A00E0] rounded-md flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <span className="text-xl font-bold text-white tracking-tight"><i>RAZOROPS</i></span>
+              </div>
+              <p className="text-slate-500 text-sm leading-relaxed mb-6">
+                The leading AI agent platform for autonomous Kubernetes optimization and cost management.
+              </p>
+              <div className="flex gap-4">
+                <div className="w-8 h-8 text-white rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
+                  <i className="bi bi-twitter-x text-xs"></i>
+                </div>
+                <div className="w-8 h-8 text-white rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
+                  <i className="bi bi-github text-xs"></i>
+                </div>
+                <div className="w-8 h-8 text-white rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer">
+                  <i className="bi bi-linkedin text-xs"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h5 className="text-white font-bold mb-6">Platform</h5>
+              <ul className="space-y-4 text-sm text-slate-500">
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Cost Guardrails</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Auto-Scaling</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Security Audit</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">API Reference</li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-white font-bold mb-6">Company</h5>
+              <ul className="space-y-4 text-sm text-slate-500">
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">
+                  <a href="/about" className="hover:text-purple-400 transition-colors cursor-pointer">About Us</a>
+                </li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">
+                  <a href="/contact" className="hover:text-purple-400 transition-colors cursor-pointer">Contact</a>
+                </li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">
+                  <a href="/blog" className="hover:text-purple-400 transition-colors cursor-pointer">Blog</a>
+                </li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">
+                  <a href="/privacy-policy" className="hover:text-purple-400 transition-colors cursor-pointer">Privacy Policy</a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h5 className="text-white font-bold mb-6">Support</h5>
+              <ul className="space-y-4 text-sm text-slate-500">
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Documentation</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Status Page</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Contact Support</li>
+                <li className="hover:text-purple-400 transition-colors cursor-pointer">Schedule Demo</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-white/5 pt-10 flex flex-col md:row justify-between items-center gap-4 text-xs text-slate-600">
+             <p>© 2025 Razorops Inc. All rights reserved.</p>
+             <div className="flex gap-6">
+                <span className="hover:text-white cursor-pointer transition-colors">
+                  <a href="/terms-of-service" className="hover:text-purple-400 transition-colors cursor-pointer">Terms of Service</a>
+                </span>
+              
+                <span className="hover:text-white cursor-pointer transition-colors">
+                  <a href="/cookie-settings" className="hover:text-purple-400 transition-colors cursor-pointer">  
+                  Cookie Settings</a>
+                  </span>
+             </div>
+          </div>
+        </div>
+      </footer>
       </body>
     </html>
   );
