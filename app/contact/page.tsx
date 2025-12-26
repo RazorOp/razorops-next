@@ -6,10 +6,10 @@ export default function Contact() {
         <p className="mt-4 text-lg">We would love to hear from you!</p>
       </header>
 
-      <main className="container mx-auto px-6 py-5">
+      <main className="container mx-auto px-6 py-12">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Details */}
-          <div >
+          <div>
             <h2 className="text-2xl font-bold mb-4">Get in Touch</h2>
             <p className="text-gray-500 mb-4">
               Center for Innovation and Entrepreneurship (CIE), IIIT Hyderabad, India
@@ -19,13 +19,18 @@ export default function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-10 mb-10 rounded-lg shadow-lg">
+          <div>
             <h2 className="text-2xl font-bold mb-4">Send Us a Message</h2>
-            <iframe width="300" height="350" target="_parent" src="https://app.blinkcrm.in/forms/15aa2d00-ac2f-4d8f-8f10-0048b337dd47?output=embed"></iframe>
+            <iframe
+              width="100%"
+              height="400"
+              src="https://app.blinkcrm.in/forms/15aa2d00-ac2f-4d8f-8f10-0048b337dd47?output=embed"
+              allowFullScreen
+              title="Contact Form"
+              className="rounded-md border border-gray-300 border-none shadow-sm"
+            ></iframe>
           </div>
         </div>
-
-        
       </main>
     </div>
   );
